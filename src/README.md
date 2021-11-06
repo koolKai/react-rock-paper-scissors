@@ -1,96 +1,49 @@
-# Getting Started with Create React App
+REACT ROCK PAPER SCISSORS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run cmd:npm install react-router-dom node-sass
 
 ##########################################
-
-npm install react-router-dom node-sass
-
-Add browser as route
--put App component in Router element so that we can use router functionality in our game.
--make some componets for various functionality of our app.
+////
+App component
+-Add browser as route
+-Put App component in Router element so that we can use router functionality in our game.
+-Make some componets(Header,Play, Game...) for various functionality of our app.
 -import them to app.js
--switch & route to app component
--use switch and route to naviagte through diffent componet to diffrent page of app by giving path destination.
+-Import Switch & Route to app component
+-use Switch and Route to naviagte through one component to other component of app by specific path destination.
 -now create two states by using useState hook,and import them to app component.
 -one for store player choice and another for score.
--set score state to header
--pass setMyChoice state functin to play camponent
+-assign score prop to header.
+-assign setMyChoice state functin as prop to play camponent.
 
 ///
-In play componet deconstruct props(setMyChoice)
-here player select a choice among "rock paper & scissors" and by using Link route navigate to game component.
-in paly component create 3 divs with respected choices and attach onClick method on each choice with setChoice parameter. setChoice function return selected choice id.
-and
+Intro Component
+
+-SetPlayerName
+-Start game on click
+-Restart game on click
+-Rules modal popup on click
+-FootNote
 
 ///
-In game componet we will get myChoice= selected choice.
-here we have to set house choice and after camparing the choices, we will get results, & according to result score will update.
-on clicking play again link it will resatrt the game and clear the previous house choice.
+Header Component
+
+-Title: ROCK PAPER SCISSORS
+-Scoreboard
+-Restart button
+-Rules button
+-to set modal pop up use Modal & setModal State with initial state 'false' and using toggle function setModal state to true on clicking Rules button.
+
+///
+Play Component
+
+-In play componet deconstruct props(setMyChoice).
+-player select a choice among "rock paper & scissors" on clicking respective icon and by using Link route navigated to game component.
+-in paly component create 3 divs with each choice and attach onClick method on each choice using setChoice function. setChoice function return selected choice id.
+
+///
+Game Component
+
+-In game componet we will get myChoice = selected choice.
+-here we set random house choice and after camparing the choices, we will get results, & according to result score will update.
+-on clicking shake again, it will resatrt the shuffle and clear the previous house choice.
