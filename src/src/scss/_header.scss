@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+
+  border: 3px solid $header-outline;
+  max-width: 45rem;
+  width: 100%;
+
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  justify-content: space-between;
+
+  .text {
+    font-size: 2.4rem;
+    font-style: bold;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 2.1rem;
+
+    span {
+      margin-bottom: 0.7rem;
+      margin-right: 4rem;
+    }
+  }
+
+  .score-box {
+    padding: 0.6rem 2.5rem;
+    background-color: #fff;
+    color: $score-text;
+    border-radius: 5px;
+    span {
+      font-size: 1.2rem;
+    }
+
+    &__score {
+      color: $dark-text;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restart {
+  background-color: #df2053;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  color: darken(black, 20%);
+  letter-spacing: 2px;
+
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    color: $dark-text;
+    cursor: pointer;
+  }
+}
+.rules {
+  padding: 10px 16px;
+  border-radius: 0.4rem;
+  border: 2px solid $header-outline;
+  color: lighten($header-outline, 20%);
+  background: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transform: translateX(0.8rem);
+
+  margin-right: 1.8rem;
+  margin-top: 0.8rem;
+  text-align: center;
+
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    color: $dark-text;
+    cursor: pointer;
+  }
+}
