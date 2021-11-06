@@ -1,0 +1,31 @@
+@mixin icon($image, $color) {
+  background-color: #fff;
+  background-image: url($image);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: $color;
+  box-shadow: inset 0px 5px 6px grey, 0px 8px darken($color, 15%);
+}
+@mixin houseIcon($image, $color) {
+  background-color: lavenderblush;
+  background-image: url($image);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: $color;
+  box-shadow: inset 0px 5px 6px grey, 0px 8px darken($color, 15%);
+  transform: scaleX(-1);
+}
+@mixin bigShadow($color) {
+  box-shadow: inset 0px 4px 5px grey, 0px 6px darken($color, 15%),
+    0px 0px 0px 40px rgba(#ffffff, 0.07), 0px 0px 0px 80px rgba(#ffffff, 0.05),
+    0px 0px 0px 120px rgba(#ffffff, 0.025);
+}
+
+@mixin shuffleIcon($image) {
+  background-image: url($image);
+  background-color: lavenderblush;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 5px 6px rgb(20, 19, 19), 0px 8px darken(tan, 15%);
+  transform: scaleX(-1);
+}
